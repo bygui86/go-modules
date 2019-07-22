@@ -10,14 +10,19 @@ go mod init <MODULE_PATH>/<MODULE_NAME>
 
 ### List dependencies
 * View final versions that will be used in a build for all direct and indirect dependencies
+
 	```
 	go list -m all
 	```
+
 * View available minor and patch upgrades for all direct and indirect dependencies
+
 	```
 	go list -u -m all
 	```
+
 * View specific dependencies
+
 	```
 	go list -m <DEPENDENCY_PATH>/<PARTIAL_DEPENDENCY_NAME>
 	```
@@ -29,8 +34,9 @@ go doc <DEPENDENCY>
 	go doc rsc.io/quote/v3
 ```
 
-### Update all 
+### Update all
 Update all direct and indirect dependencies to latest minor or patch upgrades
+
 ```
 go get -u
 ```
@@ -51,12 +57,14 @@ go get <DEPENDENCY>@<VERSION>
 
 ### Tidy dependencies
 Prune any no-longer-needed dependencies from go.mod and add any dependencies needed for other combinations of OS, architecture, and build tags
+
 ```
 go mod tidy
 ```
 
 ### `OPTIONAL` Go vendor
 Create a vendor directory
+
 ```
 go mod vendor
 ```
